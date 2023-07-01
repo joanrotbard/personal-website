@@ -1,8 +1,6 @@
 # React JS Resume Website Template
 
-### View a [live demo here.](https://reactresume.com)
-
-#### If this template has helped you and you'd like to support my work, feel free to [♥️ Sponsor](https://github.com/sponsors/tbakerx) the project
+### View a [live demo here.](https://reactresume.com)If this template has helped you and you'd like to support my work, feel free to [♥️ Sponsor](https://github.com/sponsors/tbakerx) the project
 
 ### 🎉 Version 2 is here! New features:
 
