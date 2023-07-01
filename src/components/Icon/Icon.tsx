@@ -11,8 +11,8 @@ const Icon: FC<IconProps> = memo(({children, className, svgRef, transform, defau
     fill="currentColor"
     ref={svgRef}
     transform={transform}
-    viewBox= {!defaultChecked ? "0 0 128 128" : "0 0 24 24"}
-    width={!defaultChecked ? "128" : "24"}
+    viewBox={!defaultChecked ? '0 0 128 128' : '0 0 24 24'}
+    width={!defaultChecked ? '128' : '24'}
     xmlns="http://www.w3.org/2000/svg"
     {...props}>
     {children}

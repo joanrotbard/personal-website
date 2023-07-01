@@ -5,7 +5,6 @@ import {
   FlagIcon,
   MapIcon,
   SparklesIcon,
-
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
@@ -48,7 +47,7 @@ export const SectionId = {
   Testimonials: 'testimonials',
 } as const;
 
-export type SectionId = typeof SectionId[keyof typeof SectionId];
+export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 
 /**
  * Hero section
@@ -59,12 +58,13 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-      I'm an Argentinian <strong className="text-stone-100">Full Stack Software Engineer</strong> who enjoys good practices and to learn continuously in order to understand the complexity
-      of every problem or process and design the <strong className="text-stone-100">fittest solution</strong> in order to achieve the <strong className="text-stone-100">best results</strong>.
+        I'm an Argentinian <strong className="text-stone-100">Full Stack Software Engineer</strong> who enjoys good
+        practices and to learn continuously in order to understand the complexity of every problem or process and design
+        the <strong className="text-stone-100">fittest solution</strong> in order to achieve the{' '}
+        <strong className="text-stone-100">best results</strong>.
       </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg flex items-start gap-x-2">
-        In my free time time, you can catch me training in Crossfit,
-        playing Football, or travelling around the world.
+      <p className="prose-sm flex items-start gap-x-2 text-stone-200 sm:prose-base lg:prose-lg">
+        In my free time time, you can catch me training in Crossfit, playing Football, or travelling around the world.
       </p>
     </>
   ),
@@ -234,10 +234,13 @@ export const experience: TimelineItem[] = [
     title: 'Senior Software Engineer / Lead',
     content: (
       <p>
-        Working in the design and development of the business product which is a website directed to doctors, nurses, social workers and patients (among others). <br></br><br></br>
-        The development team is formed by 12 developers splitted into 3 teams, 1 functional analyst, and 2 QA, working by Scrum methodology. I´m the leader of one development team <br></br><br></br>
-        I Achieved the completion of several projects that made the company more solid, also I worked on improving the performance and the quality of the applications.
-        I built solutions for some of the projects.
+        Working in the design and development of the business product which is a website directed to doctors, nurses,
+        social workers and patients (among others). <br></br>
+        <br></br>
+        The development team is formed by 12 developers splitted into 3 teams, 1 functional analyst, and 2 QA, working
+        by Scrum methodology. I´m the leader of one development team <br></br>
+        <br></br>I Achieved the completion of several projects that made the company more solid, also I worked on
+        improving the performance and the quality of the applications. I built solutions for some of the projects.
       </p>
     ),
   },
@@ -247,7 +250,15 @@ export const experience: TimelineItem[] = [
     title: 'Senior Software Engineer',
     content: (
       <p>
-        Worked in the improvement and maintenence of many solutions in a microservice oriented architecture that communicate in order to make the casino online <a className='duration-300 hover:text-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500' href='https://www.betonline.ag' target='_blank'>website</a> work
+        Worked in the improvement and maintenence of many solutions in a microservice oriented architecture that
+        communicate in order to make the casino online{' '}
+        <a
+          className="duration-300 hover:text-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          href="https://www.betonline.ag"
+          target="_blank">
+          website
+        </a>{' '}
+        work
       </p>
     ),
   },
@@ -257,9 +268,12 @@ export const experience: TimelineItem[] = [
     title: 'Senior Software Engineer',
     content: (
       <p>
-        Worked in the design and development of one of the most important products of the bank, which persists and generates reports of all the mortgage loans.<br></br>
-        The team was conformed by 8 developers and 1 functional analyst, working by Scrum methodology. Giving Support on productive bugs<br></br><br></br>
-        I stabilize the performance of the application mentioned above by applicating some design patterns, swapping a development framework (ORM) , and analyzing the database queries.
+        Worked in the design and development of one of the most important products of the bank, which persists and
+        generates reports of all the mortgage loans.<br></br>
+        The team was conformed by 8 developers and 1 functional analyst, working by Scrum methodology. Giving Support on
+        productive bugs<br></br>
+        <br></br>I stabilize the performance of the application mentioned above by applicating some design patterns,
+        swapping a development framework (ORM) , and analyzing the database queries.
       </p>
     ),
   },
@@ -269,9 +283,16 @@ export const experience: TimelineItem[] = [
     title: 'Ssr. Software Engineer',
     content: (
       <p>
-        Managed to accomplish the creation of a tool which works for all projects where payments are involved, because the main duty of this tool is to get information from the Ministry of the Economy web services, where payments are reported and bills are generated.<br></br><br></br>
-        The Ministry of the Economy congratulated the SSN because, although the project was very complex, the results were very good, and then, the SSN was recommended to all the other superintendence’s to work with.<br></br><br></br>
-        Also worked on a project of a system which recollects insurance policies from insurance companies and processes them to be store. The number of policies and endorsement policies is around 2 billion.<br></br><br></br>
+        Managed to accomplish the creation of a tool which works for all projects where payments are involved, because
+        the main duty of this tool is to get information from the Ministry of the Economy web services, where payments
+        are reported and bills are generated.<br></br>
+        <br></br>
+        The Ministry of the Economy congratulated the SSN because, although the project was very complex, the results
+        were very good, and then, the SSN was recommended to all the other superintendence’s to work with.<br></br>
+        <br></br>
+        Also worked on a project of a system which recollects insurance policies from insurance companies and processes
+        them to be store. The number of policies and endorsement policies is around 2 billion.<br></br>
+        <br></br>
       </p>
     ),
   },
@@ -281,7 +302,14 @@ export const experience: TimelineItem[] = [
     title: 'Jr. Software Engineer',
     content: (
       <p>
-        Worked on the creation and implementation of a website for a client who offers travelling and experiences packages. e.g.: <a className='duration-300 hover:text-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500' href='https://www.fanbag.com.ar' target='_blank'>Fanbag</a>
+        Worked on the creation and implementation of a website for a client who offers travelling and experiences
+        packages. e.g.:{' '}
+        <a
+          className="duration-300 hover:text-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          href="https://www.fanbag.com.ar"
+          target="_blank">
+          Fanbag
+        </a>
       </p>
     ),
   },
@@ -299,7 +327,8 @@ export const testimonial: TestimonialSection = {
       It was really a pleasure to work with him, he was dedicated and a fast deliver in all of his tasks.
       He was also careful enough in terms of quality and kindness.
       Hope to work together in a near future.`,
-      image: 'https://media.licdn.com/dms/image/C4E03AQFvuHOiY3A6dA/profile-displayphoto-shrink_800_800/0/1540417731083?e=1693440000&v=beta&t=kTdTqcpE2JI-Shs_XUcx7rQ1GPiKVOIQtpIxxK8xAuQ',
+      image:
+        'https://media.licdn.com/dms/image/C4E03AQFvuHOiY3A6dA/profile-displayphoto-shrink_800_800/0/1540417731083?e=1693440000&v=beta&t=kTdTqcpE2JI-Shs_XUcx7rQ1GPiKVOIQtpIxxK8xAuQ',
     },
     {
       name: 'Eduardo Haban - Teach Lead at Supervielle Bank',
@@ -307,7 +336,8 @@ export const testimonial: TestimonialSection = {
       proactive and with an incredible ability to focus on what it´s need to be done.
       He cares not just in the code but in the product as a whole, so you can feel safe delegating complex tasks to him: he will be committed to find the bes solution.
       I had the pleasure of having him on my team for two years and the experience working with him was great`,
-      image: 'https://media.licdn.com/dms/image/D4D03AQHtAw9LepW-3g/profile-displayphoto-shrink_800_800/0/1682210048247?e=1693440000&v=beta&t=NwgBxRQ6IXeBnL-_Y9JRmatADsGR5kRD1wxDzLU3wi8',
+      image:
+        'https://media.licdn.com/dms/image/D4D03AQHtAw9LepW-3g/profile-displayphoto-shrink_800_800/0/1682210048247?e=1693440000&v=beta&t=NwgBxRQ6IXeBnL-_Y9JRmatADsGR5kRD1wxDzLU3wi8',
     },
   ],
 };
