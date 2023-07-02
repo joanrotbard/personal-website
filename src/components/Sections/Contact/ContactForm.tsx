@@ -1,27 +1,38 @@
 import emailjs from '@emailjs/browser';
 import {FC, memo, RefObject, useCallback, useRef} from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm: FC = memo(() => {
   const form = useRef();
 
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
+    toast.success('Thank you for contacting me, I will review your message and reply soon!', {
+        position: toast.POSITION.TOP_RIGHT,
+        theme: 'colored'
+    });
+    event.preventDefault();
       emailjs
         .sendForm(
-          'service_fp8dfbl',
-          'template_cx4x978',
+          process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID as string,
+          process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID as string,
           form.current as unknown as HTMLFormElement,
-          '7DF21KMija0vA3hl1',
+          process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY as string,
         )
         .then(
           (result: unknown) => {
             // show the user a success message
             console.log('MESSAGE SENT: ', result);
+            (form.current as unknown as HTMLFormElement).reset();
           },
           (error: unknown) => {
             // show the user an error
-            console.log('ERROR WHILE TRYING TO CONTACT: ', error);
+            console.log('Something went wrong while trying to contact ', error);
+            toast.error('Something went wrong while trying to contact', {
+                position: toast.POSITION.TOP_RIGHT,
+                theme: 'colored'
+            });
           },
         );
     },
@@ -53,6 +64,7 @@ const ContactForm: FC = memo(() => {
         type="submit">
         Send Message
       </button>
+      <ToastContainer />
     </form>
   );
 });

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./stars";
+@import "./animations";
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -48,4 +51,19 @@ th {
 
 th {
   font-weight: 600;
+}
+
+.mainDiv{
+  background: linear-gradient(136deg, rgb(68, 132, 206), rgb(26, 215, 192), rgb(255, 155, 17), rgb(155, 89, 182), rgb(255, 127, 127), rgb(236, 240, 241)) 0% 0% / 1200% 1200%;
+}
+
+.bgstyle {
+  -webkit-animation: BackgroundAnimation 70s ease infinite;
+  -moz-animation: BackgroundAnimation 70s ease infinite;
+  -o-animation: BackgroundAnimation 70s ease infinite;
+  animation: BackgroundAnimation 70s ease infinite;
+}
+
+.bg-gradient {
+  background: linear-gradient(rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
 }
