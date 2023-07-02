@@ -1,18 +1,19 @@
+import 'react-toastify/dist/ReactToastify.css';
+
 import emailjs from '@emailjs/browser';
 import {FC, memo, RefObject, useCallback, useRef} from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {toast,ToastContainer} from 'react-toastify';
 
 const ContactForm: FC = memo(() => {
   const form = useRef();
 
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
-    toast.success('Thank you for contacting me, I will review your message and reply soon!', {
+      toast.success('Thank you for contacting me, I will review your message and reply soon!', {
         position: toast.POSITION.TOP_RIGHT,
-        theme: 'colored'
-    });
-    event.preventDefault();
+        theme: 'colored',
+      });
+      event.preventDefault();
       emailjs
         .sendForm(
           process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID as string,
@@ -30,8 +31,8 @@ const ContactForm: FC = memo(() => {
             // show the user an error
             console.log('Something went wrong while trying to contact ', error);
             toast.error('Something went wrong while trying to contact', {
-                position: toast.POSITION.TOP_RIGHT,
-                theme: 'colored'
+              position: toast.POSITION.TOP_RIGHT,
+              theme: 'colored',
             });
           },
         );

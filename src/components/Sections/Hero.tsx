@@ -7,13 +7,12 @@ import {heroData, SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 import Socials from '../Socials';
 
-
 const Hero: FC = memo(() => {
-  const { imageSrc, name, description, actions} = heroData;
+  const {imageSrc, name, description, actions} = heroData;
 
   return (
     <Section noPadding sectionId={SectionId.Hero}>
-      <div className="relative flex h-screen w-full items-center justify-center mainDiv text-light d-flex align-content-center align-items-center flex-wrap m-0">
+      <div className="mainDiv text-light d-flex align-content-center align-items-center relative m-0 flex h-screen w-full flex-wrap items-center justify-center">
         <Image
           alt={`${name}-image`}
           className="absolute z-0 h-full w-full object-cover"

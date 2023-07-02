@@ -58,9 +58,9 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg  lg:text-xl">
-        I'm a <strong className="text-stone-100">Full Stack Software Engineer</strong> who enjoys good
-        practices and to learn continuously in order to understand the complexity of every problem or process and design
-        the <strong className="text-stone-100">fittest solution</strong> in order to achieve the{' '}
+        I'm a <strong className="text-stone-100">Full Stack Software Engineer</strong> who enjoys good practices and to
+        learn continuously in order to understand the complexity of every problem or process and design the{' '}
+        <strong className="text-stone-100">fittest solution</strong> in order to achieve the{' '}
         <strong className="text-stone-100">best results</strong>.
       </p>
     </>
