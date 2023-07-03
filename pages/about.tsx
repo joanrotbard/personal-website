@@ -71,7 +71,7 @@ export default function about() {
           >
             Hey, my name is JOAN ROTBARD. I am
             a {age} year old Full Stack Software Engineer who enjoys good practices and to learn continuously in order
-             to understand the complexity of every problem or process and design the fittest solution in order to achieve the best results.
+             to understand the complexity of every problem or process and design the fittest solution to achieve the best results.
           </motion.p>
           <div className="about-left__langs">
             <motion.h3 variants={item}>LANGUAGES</motion.h3>
