@@ -82,24 +82,28 @@ export default function Contact() {
             </ul>
           </motion.div>
           <motion.div
-            className="contact-infos__right"
+            className="contact-infos__left"
             variants={container}
             initial="hidden"
             animate="show"
           >
-            <div style={{ overflow: "hidden" }}>
+            <div
+              style={{
+                overflow: "hidden",
+              }}
+            >
               <motion.h3
                 animate={{ y: 0, opacity: 1 }}
                 initial={{ y: "100%", opacity: 0 }}
-                transition={{ delay: 0, duration: 0.5 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
               >
-                Social Medias{" "}
+                Whatsapp
               </motion.h3>
             </div>
             <ul>
-              <motion.li variants={item}>
-                <Link
-                  href="https://twitter.com/JRotbard"
+            <motion.li variants={item}>
+                <a
+                  href="https://wa.me/+5491135660161?text=Hello Joan I would like to connect"
                   target="_blank"
                   rel="noreferrer"
                   onMouseEnter={() => cursorChangeHandler("hovered")}
@@ -117,10 +121,28 @@ export default function Contact() {
                       strokeLinejoin="round"
                       d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
                     />
-                  </svg>{" "}
-                  Twitter
-                </Link>
+                  </svg>
+                  +54 911 3566 0161
+                </a>
               </motion.li>
+            </ul>
+          </motion.div>
+          <motion.div
+            className="contact-infos__right"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
+            <div style={{ overflow: "hidden" }}>
+              <motion.h3
+                animate={{ y: 0, opacity: 1 }}
+                initial={{ y: "100%", opacity: 0 }}
+                transition={{ delay: 0, duration: 0.5 }}
+              >
+                Social Medias{" "}
+              </motion.h3>
+            </div>
+            <ul>
               <motion.li variants={item}>
                 <Link
                   href="https://www.linkedin.com/in/joanrotbard/"
