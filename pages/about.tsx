@@ -11,23 +11,35 @@ import { MouseContext } from "../context/mouseContext";
 export default function about() {
   const { cursorChangeHandler } = useContext(MouseContext);
 
-  const [age, setAge] = useState(0);
+  const initialData = {
+    age: 0,
+    yop: 0
+  }
+
+  const [data, setData] = useState(initialData);
 
   useEffect(() => {
     const today = new Date();
-    const birthDate = new Date(1995, 10, 21);
+    const birthDate = new Date(1995, 2, 21);
+    const yopStartDate = new Date(2013, 5, 21);
 
-    var currentYear = today.getFullYear();
-    var birthYear = birthDate.getFullYear();
-    var ageInYears = currentYear - birthYear;
+    const currentYear = today.getFullYear();
+    let ageInYears = currentYear - birthDate.getFullYear();
+    const yopYears = currentYear - yopStartDate.getFullYear();
+
 
     if (
       birthDate.getMonth() > today.getMonth() ||
       (birthDate.getMonth() == today.getMonth() &&
         birthDate.getDate() > today.getDate())
     ) {
-      setAge(ageInYears - 1);
+      ageInYears= ageInYears--;
     }
+    
+    setData({
+      age: ageInYears,
+      yop: yopYears
+    })
   }, []);
 
   return (
@@ -60,19 +72,46 @@ export default function about() {
               initial={{ y: "50%", opacity: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              About me
+              Why choose me?
             </motion.h2>
           </div>
           <motion.p
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: "15%", opacity: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
+            className="about-left__important-text"
+          >
+            Hello there! my name is JOAN ROTBARD and I am {data.age} years old.
+          </motion.p>
+          
+          <motion.p
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: "15%", opacity: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
             className="about-left__text"
           >
-            Hey, my name is JOAN ROTBARD. I am
-            a {age} year old Full Stack Software Engineer who enjoys good practices and to learn continuously in order
-             to understand the complexity of every problem or process and design the fittest solution to achieve the best results.
+            My extensive {data.yop} years of experience in diverse programming languages provide me with a strong foundation and a deep 
+            understanding of various technological ecosystems. This versatility allows me to adapt quickly to new projects and languages, ensuring that I can contribute effectively from day one.
           </motion.p>
+
+          <motion.p
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: "15%", opacity: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="about-left__text"
+          >
+            Furthermore, my ability to learn programming languages swiftly sets me apart. In the dynamic world of software development, where new technologies emerge frequently, my aptitude for rapid learning enables me to stay ahead of the curve. This quality ensures that I can continuously expand my skill set and tackle complex challenges with ease.
+          </motion.p>
+
+          <motion.p
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: "15%", opacity: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="about-left__important-text"
+          >
+            In summary, my extensive experience in diverse programming languages, coupled with my ability to learn new technologies swiftly and my sense of responsibility, make me an excellent choice. I am confident that my expertise and dedication will contribute significantly to the success of any project I undertake.
+          </motion.p>
+
           <div className="about-left__langs">
             <motion.h3 variants={item}>LANGUAGES</motion.h3>
             <motion.li variants={item}>
@@ -115,6 +154,7 @@ export default function about() {
               variants={item}
               href="https://www.linkedin.com/in/joanrotbard/#ember102"
               onMouseEnter={() => cursorChangeHandler("hovered")}
+              target="_blank"
               onMouseLeave={() => cursorChangeHandler("")}
             >
               <svg

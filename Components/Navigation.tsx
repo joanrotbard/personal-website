@@ -42,7 +42,7 @@ export default function Navigation() {
           onMouseLeave={() => cursorChangeHandler("")}
           onClick={closeNavMenu}
         >
-          <li>About</li>
+          <li>Why me?</li>
         </Link>
         <Link
           href="/skills"

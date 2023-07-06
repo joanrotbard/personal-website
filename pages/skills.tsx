@@ -81,6 +81,7 @@ export default function Skills() {
           name: ".NET FWK /.Net Core",
           color: "#000000",
           colorRGB: "155, 79, 151",
+          isBgBlack: true,
         },
       ],
     },

@@ -52,11 +52,11 @@ export default function Experience() {
       date: "2018 - 2020",
       description:
         "  Worked in the improvement and maintenence of many solutions in a microservice oriented architecture that communicate in order to make the casino online",
-      stacks: ["React", "NextJS","NodeJs", "TypeScript", "GCP", "SCSS", "MySQL", "Prisma", "Tailwind"],
+      stacks: ["React", "NextJS","NodeJs", "Jest", "TypeScript", "GCP", "SCSS", "MySQL", "Prisma", "Tailwind"],
     },
     {
       name: "J.P Morgan",
-      position: "Senior Software Engineer",
+      position: "Associate Software Engineer",
       location: "",
       date: "2015 - 2018",
       description:
@@ -67,7 +67,7 @@ export default function Experience() {
       I stabilize the performance of the application mentioned above by applicating some design patterns, swapping a development framework (ORM) , and analyzing the database queries.
 
       `,
-      stacks: ["React", "NextJS","NodeJs", "TypeScript", "Bootstrap", "MongoDb", "MySQL", "Redis", "TypeORM" ,"SCSS"],
+      stacks: ["React", "NextJS","NodeJs","Redux", "Jest", "TypeScript", "Bootstrap", "MongoDb", "MySQL", "Redis", "TypeORM" ,"SCSS"],
     },
     {
       name: "Superintendence of Insurances of the Nation",
@@ -84,7 +84,7 @@ export default function Experience() {
 
       Also worked on a project of a system which recollects insurance policies from insurance companies and processes
       them to be store. The number of policies and endorsement policies is around 2 billion.`,
-      stacks: ["C#", "PHP", "SQL", "Dapper", "REST API", "jQuery", "CSS", ],
+      stacks: ["C#", "SQL", "Dapper", "REST API", "jQuery", "CSS", ],
     },
     {
       name: "VirtualMind",
@@ -93,29 +93,14 @@ export default function Experience() {
       date: "2012 - 2013",
       description:
         "   Worked on the creation and implementation of a website for a client who offers travelling and experiences packages. e.g. https://www.fanbag.com.ar",
-      stacks: ["C#", "PHP", "SQL" ],
+      stacks: ["PHP", "SQL" ],
     },
   ];
   const sideProjects: PersonalWork[] = [
     {
-      name: "Sharuco",
-      url: "https://sharuco.lndev.me/",
-      image: "/projects/sharuco.png",
-    },
-    {
-      name: "LNUI",
-      url: "https://lnui.lndev.me/",
-      image: "/projects/lnui.png",
-    },
-    {
-      name: "Cameroon Portfolios",
-      url: "https://cameroon-portfolios.vercel.app/",
-      image: "/projects/camer-portfolio.png",
-    },
-    {
-      name: "Ulwo App",
-      url: "https://ulwo.lndev.me/",
-      image: "/projects/ulwo.png",
+      name: "IntegraComex",
+      url: "https://www.integracomex.com.ar/",
+      image: "/projects/integra.png",
     },
   ];
 
@@ -216,7 +201,7 @@ export default function Experience() {
             ))}
           </div>
         </motion.div>
-        {/* <motion.div
+        <motion.div
           className="experience-personal"
           variants={container}
           initial="hidden"
@@ -252,6 +237,7 @@ export default function Experience() {
                 <motion.li key={index} variants={skillsItem}>
                   <Link
                     href={project.url}
+                    target="_blank"
                     passHref
                     onMouseEnter={() => {
                       cursorChangeHandler("hovered");
@@ -281,7 +267,7 @@ export default function Experience() {
               ))}
             </ul>
           </div>
-        </motion.div> */}
+        </motion.div>
       </main>
     </>
   );

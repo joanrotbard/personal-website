@@ -40,12 +40,10 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>JOAN ROTBARD • FrontEnd Engineer</title>
+        <title>JOAN ROTBARD</title>
         <meta
           name="description"
-          content="
-        I’m a Front-end Developer & Web Integrator, I’m passionate about creating beautiful, intuitive and responsive websites.
-        "
+          content=""
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -93,24 +91,8 @@ export default function Home() {
           </div>
           <div style={{ overflow: "hidden" }}>
             <motion.h1 variants={item}>
-              BUT YOU CAN CALL ME{" "}
-              <span
-                onMouseEnter={() => cursorChangeHandler("hovered")}
-                onMouseLeave={() => cursorChangeHandler("")}
-              >
-                {" "}
-                JORDO{" "}
-              </span>
+              Full Stack Software Engineer
             </motion.h1>
-          </div>
-          <div
-            style={{
-              overflow: "hidden",
-            }}
-          >
-            <motion.p variants={item}>
-              I’m a Full Stack Software Engineer.
-            </motion.p>
           </div>
           <motion.h3 variants={item}>
             <Link
@@ -140,7 +122,7 @@ export default function Home() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span>About me</span>
+              <span>Why choose me?</span>
             </Link>
           </motion.h3>
         </motion.div>

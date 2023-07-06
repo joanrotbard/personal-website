@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    padding: 15rem 1.5rem 1.5rem 15rem;
+    padding: 5rem 1.5rem 1.5rem 15rem;
     &__title {
       width: 100%;
       border-bottom: 2px solid $primary;
@@ -32,8 +32,20 @@
         }
       }
     }
-    &__text {
+    &__important-text {
       font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 1.4;
+      font-family: $font-satoshi;
+      a {
+        color: $primary;
+        font-weight: inherit;
+        font-family: inherit;
+        text-decoration: underline;
+      }
+    }
+    &__text {
+      font-weight: 200;
       font-size: 1.25rem;
       line-height: 1.4;
       font-family: $font-satoshi;
@@ -205,6 +217,12 @@ body.dark {
         }
       }
       &__text {
+        color: $light;
+        a {
+          color: $light;
+        }
+      }
+      &__important-text {
         color: $light;
         a {
           color: $light;
