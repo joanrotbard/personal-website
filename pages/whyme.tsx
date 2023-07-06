@@ -45,7 +45,7 @@ export default function whyme() {
   return (
     <>
       <Head>
-        <title>JOAN ROTBARD | whyme</title>
+        <title>JOAN ROTBARD | Why Me?</title>
         <meta
           name="description"
           content=""
