@@ -102,6 +102,11 @@ export default function Experience() {
       url: "https://www.integracomex.com.ar/",
       image: "/projects/integra.png",
     },
+    {
+      name: "Patient Tracking",
+      url: "http://monitoreodepacientes.com.ar/",
+      image: "/projects/cuest.png",
+    },
   ];
 
   const [imageUrl, setImageUrl] = useState("");
