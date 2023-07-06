@@ -8,7 +8,7 @@ import { container, item } from "../animation";
 import { useContext } from "react";
 import { MouseContext } from "../context/mouseContext";
 
-export default function about() {
+export default function whyme() {
   const { cursorChangeHandler } = useContext(MouseContext);
 
   const initialData = {
@@ -45,7 +45,7 @@ export default function about() {
   return (
     <>
       <Head>
-        <title>JOAN ROTBARD | About</title>
+        <title>JOAN ROTBARD | whyme</title>
         <meta
           name="description"
           content=""
@@ -109,7 +109,7 @@ export default function about() {
             transition={{ delay: 0.1, duration: 0.5 }}
             className="about-left__important-text"
           >
-            In summary, my extensive experience in diverse programming languages, coupled with my ability to learn new technologies swiftly and my sense of responsibility, make me an excellent choice. I am confident that my expertise and dedication will contribute significantly to the success of any project I undertake.
+            In summary, my experience in diverse programming languages, coupled with my ability to learn new technologies swiftly and my sense of responsibility, make me an excellent choice. I am confident that my expertise and dedication will contribute significantly to the success of any project I undertake.
           </motion.p>
 
           <div className="about-left__langs">

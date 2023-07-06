@@ -96,7 +96,7 @@ export default function Home() {
           </div>
           <motion.h3 variants={item}>
             <Link
-              href="/about"
+              href="/whyme"
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
             >

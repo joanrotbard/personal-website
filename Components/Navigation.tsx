@@ -36,8 +36,8 @@ export default function Navigation() {
           <li>Home</li>
         </Link>
         <Link
-          href="/about"
-          className={`${router.pathname == "/about" ? "active" : ""}`}
+          href="/whyme"
+          className={`${router.pathname == "/whyme" ? "active" : ""}`}
           onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}
           onClick={closeNavMenu}
