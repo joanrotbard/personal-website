@@ -176,6 +176,7 @@ export default function Experience() {
                   {work.url && (
                     <Link
                       href={work.url}
+                      target="_blank"
                       passHref
                       onMouseEnter={() => cursorChangeHandler("hovered")}
                       onMouseLeave={() => cursorChangeHandler("")}
